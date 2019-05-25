@@ -1,5 +1,40 @@
 extends layout
+include _includes/htmlHelpers
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+        small &nbsp;Find place to work with wifi near you
+  .row
+    .col-12.col-md-8
+      .card.border-dark
+        .card-header.bg-primary
+          a(href='/location') Starcups
+            small &nbsp;
+              +locationRating(3)              
+            span.badge.badge-pill.badge-default.float-right 100 m
+        .card-body.text-dark
+          p.card-text address 125 high street, reading, RG6 1PS
+          p.card-text facilities &nbsp;
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning foods
+            span.badge.badge-waning premium wifi
+      .card.border-dark
+        .card-header
+          a(href='/location') HotMeals
+            small &nbsp;
+              i.fas.fa-star
+              i.fas.fa-star
+              i.far.fa-star
+              i.far.fa-star
+              i.far.fa-star
+            span.badge.badge-pill.badge-default.float-right 100 m
+        .card-body.text-dark
+          p.card-text address 125 high street, reading, RG6 1PS
+          p.card-text facilities &nbsp;
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning foods
+            span.badge.badge-warning premium wifi  
+    .col-12.col-md-4
+      p.lead Loc8r help you to find place to works when out and about

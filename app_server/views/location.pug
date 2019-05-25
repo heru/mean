@@ -1,0 +1,51 @@
+extends layout
+include _includes/htmlHelpers
+block content
+  .row.banner
+    .col-12
+      h1 Starcups
+  .row
+    .col-12.col-md-8
+      .card.border-dark
+        .card-header.text-dark
+           h1 Starcups
+             small &nbsp;
+               +locationRating(4)
+             a(href='/location/review/new').float-right.btn.btn-primary
+               span.text-center Add Review
+        .card-body.text-dark
+          p.card-text address 125 high street, reading RG6 1PS
+          p.card-text facilities &nbsp;
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning foods
+            span.badge.badge-waning premium wifi 
+            span.badge.badge-pill.badge-default.float-right 100m
+      .card.border-light
+        .card-header.text-dark
+          h4 Reviews
+            small &nbsp; from our beloved visitors
+        .card-body.text-dark
+          .row
+            .col-12.no-gutters.review-header
+                span.rating
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.far.fa-star
+                i.far.fa-star
+                span.review author Simon Tan
+                small.review timestamps 18 May 2019
+            .col-12
+                p what a great place
+          .row
+            col-12.no-gutters.review-header
+              span.rating &nbsp;
+                i.fas.fa-star
+                i.fas.fa-star
+                i.far.fa-star
+                i.far.fa-star
+                i.far.fa-star
+              span.review author David Black &nbsp;
+              small.float-right timestamps 18 April 2019
+          .col-12
+            p coffee not great      

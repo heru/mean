@@ -1,0 +1,5 @@
+mixin locationRating(rating)
+  - for(let r = 1; r <= rating; r++)
+    i.fas.fa-star
+  - for (let r = rating; r < 5; r++)
+    i.far.fa-star
